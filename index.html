@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="css/kendo/kendo.common.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="css/kendo/kendo.metro.min.css" rel="stylesheet" type="text/css">
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/kendo/kendo.all.min.js"></script>
+</head>
+
+<body>
+	<input id="awesomeAutocomplete" />
+
+	<script>
+		$(function() {
+			var people = ["Brandon", "Burke", "Clark"];
+
+			$('#awesomeAutocomplete').kendoAutoComplete({
+				dataSource: people
+			});
+		});
+	</script>
+</body>
+</html>

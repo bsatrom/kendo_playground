@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'KendoMobileDemo' target in the 'KendoMobileDemo' project
+//
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+#endif

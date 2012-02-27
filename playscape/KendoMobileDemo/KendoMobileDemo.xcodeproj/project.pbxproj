@@ -35,6 +35,7 @@
 		2EBAD4C314F6DEFD00E9A1F2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EBAD4C214F6DEFD00E9A1F2 /* AppDelegate.m */; };
 		2EBAD4C614F6DEFD00E9A1F2 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EBAD4C514F6DEFD00E9A1F2 /* MainViewController.m */; };
 		2EBAD4C814F6DEFD00E9A1F2 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EBAD4C714F6DEFD00E9A1F2 /* MainViewController.xib */; };
+		2EBAD4D114F6E32E00E9A1F2 /* www in Resources */ = {isa = PBXBuildFile; fileRef = 2EBAD4D014F6E32E00E9A1F2 /* www */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,10 +53,10 @@
 		2EBAD49614F6DEFC00E9A1F2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		2EBAD49814F6DEFC00E9A1F2 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		2EBAD49A14F6DEFC00E9A1F2 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
-		2EBAD49E14F6DEFC00E9A1F2 /* KendoMobileDemo-Info.plist */ = {isa = PBXFileReference; path = "KendoMobileDemo-Info.plist"; sourceTree = "<group>"; };
+		2EBAD49E14F6DEFC00E9A1F2 /* KendoMobileDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KendoMobileDemo-Info.plist"; sourceTree = "<group>"; };
 		2EBAD4A014F6DEFC00E9A1F2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2EBAD4A214F6DEFC00E9A1F2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2EBAD4A414F6DEFC00E9A1F2 /* KendoMobileDemo-Prefix.pch */ = {isa = PBXFileReference; path = "KendoMobileDemo-Prefix.pch"; sourceTree = "<group>"; };
+		2EBAD4A414F6DEFC00E9A1F2 /* KendoMobileDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KendoMobileDemo-Prefix.pch"; sourceTree = "<group>"; };
 		2EBAD4A514F6DEFC00E9A1F2 /* PhoneGap.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhoneGap.framework; path = /Users/Shared/PhoneGap/Frameworks/PhoneGap.framework; sourceTree = "<absolute>"; };
 		2EBAD4AA14F6DEFC00E9A1F2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Resources/en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2EBAD4AE14F6DEFC00E9A1F2 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = Resources/es.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -66,12 +67,13 @@
 		2EBAD4BA14F6DEFC00E9A1F2 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resources/splash/Default@2x.png"; sourceTree = "<group>"; };
 		2EBAD4BC14F6DEFD00E9A1F2 /* Capture.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Capture.bundle; path = Resources/Capture.bundle; sourceTree = "<group>"; };
 		2EBAD4BE14F6DEFD00E9A1F2 /* PhoneGap.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PhoneGap.plist; sourceTree = "<group>"; };
-		2EBAD4C114F6DEFD00E9A1F2 /* AppDelegate.h */ = {isa = PBXFileReference; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
+		2EBAD4C114F6DEFD00E9A1F2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
 		2EBAD4C214F6DEFD00E9A1F2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate.m; sourceTree = "<group>"; };
-		2EBAD4C414F6DEFD00E9A1F2 /* MainViewController.h */ = {isa = PBXFileReference; name = MainViewController.h; path = Classes/MainViewController.h; sourceTree = "<group>"; };
+		2EBAD4C414F6DEFD00E9A1F2 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = Classes/MainViewController.h; sourceTree = "<group>"; };
 		2EBAD4C514F6DEFD00E9A1F2 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = Classes/MainViewController.m; sourceTree = "<group>"; };
 		2EBAD4C714F6DEFD00E9A1F2 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainViewController.xib; path = Classes/MainViewController.xib; sourceTree = "<group>"; };
-		2EBAD4CA14F6DEFD00E9A1F2 /* README */ = {isa = PBXFileReference; name = README; path = Plugins/README; sourceTree = "<group>"; };
+		2EBAD4CA14F6DEFD00E9A1F2 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; name = README; path = Plugins/README; sourceTree = "<group>"; };
+		2EBAD4D014F6E32E00E9A1F2 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 		2EBAD47014F6DEFC00E9A1F2 = {
 			isa = PBXGroup;
 			children = (
+				2EBAD4D014F6E32E00E9A1F2 /* www */,
 				2EBAD49C14F6DEFC00E9A1F2 /* KendoMobileDemo */,
 				2EBAD48114F6DEFC00E9A1F2 /* Frameworks */,
 				2EBAD47F14F6DEFC00E9A1F2 /* Products */,
@@ -300,6 +303,7 @@
 				2EBAD4BD14F6DEFD00E9A1F2 /* Capture.bundle in Resources */,
 				2EBAD4BF14F6DEFD00E9A1F2 /* PhoneGap.plist in Resources */,
 				2EBAD4C814F6DEFD00E9A1F2 /* MainViewController.xib in Resources */,
+				2EBAD4D114F6E32E00E9A1F2 /* www in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

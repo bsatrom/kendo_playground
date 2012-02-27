@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-GemTest::Application.config.secret_token = '67c94943f6cdb281c307a545d29e67188f9554f9c285a35f9aa61db08a7a21345cc604768936ba62c3a6c99a7e729cb45a493faca4e2fa77d19260fddbe5b74b'
+GemTest::Application.config.secret_token = '5fdd22595173142da9f5de44dd3806beae32b607ebccc8330708430954988e58fc8a35c6022ec332fa1ac607ffe43fb4240b2928e0b5a93eb89fb5fb618aec2f'

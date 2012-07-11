@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Q2 DataViz Demos</title>
+		<link rel="stylesheet" href="stylesheets/kendo.common.min.css">
+		<link rel="stylesheet" href="stylesheets/kendo.default.min.css">
+		<style>
+			.chart-wrapper > div {
+				width: 400px;
+				height: 400px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Q2 Beta Demos - DataViz</h1>
+		<div>
+			<h3>Donut Chart</h3>
+			<div class="chart-wrapper">
+				<div id="doughnutConsumption"></div>
+			</div>
+		</div>
+		<div>
+			<h3>DateAxis Support for Charts</h3>
+			<div class="chart-wrapper">
+	        <div id="donughtSales"></div>
+	    </div>
+		</div>		
+		<script src="javascripts/jquery.min.js"></script>
+		<script src="javascripts/kendo.all.min.js"></script>
+		<script>
+			//Donut Chart
+			$(function() {
+				var data = [{
+					name: "Burke",
+					pctConsumed: 54
+				}, {
+					name: "Brandon",
+					pctConsumed: 11
+				}, {
+					name: "John",
+					pctConsumed: 18
+				}, {
+					name: "Stefan",
+					pctConsumed: 7,
+					winner: true
+				}, {
+					name: "Todd",
+					pctConsumed: 10
+				}];
+
+				$('#doughnutConsumption').kendoChart({
+					theme: "BlueOpal",
+					title: {
+						text: "Doughnut Consumption by Team Member"
+					},
+					dataSource: data,
+					series: [{
+						type: "donut",
+						field: "pctConsumed",
+						categoryField: "name",
+						explodeField: "winner"
+					}],
+					tooltip: {
+						visible: true,
+						template: "${ category }: ${ value }%"
+					}
+				});
+
+				//Date Axis Chart
+				$('#donughtSales').kendoChart({
+					theme: "BlueOpal",
+					title: {
+              text: "Donughts Sold per Month"
+          },
+          series: [{
+              type: "column",
+              data: [500, 405, 65, 10, 345, 55, 400],
+              aggregate: "avg" 
+          }],
+          categoryAxis: {
+              baseUnit: "months",
+              categories: [
+                  new Date("2012/05/18"),
+                  new Date("2012/05/19"),
+                  new Date("2012/05/20"),
+                  new Date("2012/06/21"),
+                  new Date("2012/06/22"),
+                  new Date("2012/07/30"),
+                  new Date("2012/06/31"),
+              ]
+          }
+				});
+			});
+			</script>
+	</body>
+</html>

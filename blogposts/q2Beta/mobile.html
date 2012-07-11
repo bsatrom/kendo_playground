@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Q2 Mobile Demos</title>
+		<link rel="stylesheet" href="stylesheets/kendo.common.min.css">
+		<link rel="stylesheet" href="stylesheets/kendo.default.min.css">
+		<link rel="stylesheet" href="stylesheets/kendo.mobile.all.min.css">
+		<style>
+			img {
+				float: left;
+				margin-left: 10px;
+			}
+
+			p {
+				margin-left: 160px;
+				font-size: 12px;
+			}
+
+			div.pres {
+				margin-top: 80px;
+			}
+
+			#contact, div.km-modalview-wrapper {
+				width: 300px;
+				height: 300px;
+			}
+
+			#messageSend
+	    {
+	        display: block;
+	        text-align: center;
+	        margin: 0 .8em;
+	        font-size: 1.2em;
+	    }
+
+	    textarea {
+	    	width: 250px;
+	    	height: 100px;
+	    	font-size: 14px;
+	    }
+		</style>
+	</head>
+	<body>
+		<div data-role="splitview">
+
+			<!-- Side Pane -->
+			<div data-role="pane" id="side-pane">
+		    <div data-role="view" data-title="Speakers">
+		       <ul data-role="listview" data-style="inset" data-type="group">
+		       	<li> Speakers
+		       		<ul>
+		         		<li><a href="#burke" data-target="main-pane">Burke Holland</a></li>
+		         		<li><a href="#todd" data-target="main-pane">Todd Anglin</a></li>
+		         		<li><a href="#john" data-target="main-pane">John Bristowe</a></li>
+		         		<li><a href="#brandon" data-target="main-pane">Brandon Satrom</a></li>
+		       		</ul>
+		       	</li>
+		       	<li> Topics
+		       		<ul>
+		       			<li><a href="#web" data-target="main-pane">Web</a></li>
+		       			<li><a href="#dataViz" data-target="main-pane">DataViz</a></li>
+		       			<li><a href="#mobile" data-target="main-pane">Mobile</a></li>
+		       		</ul>
+		       	</li>		       		
+		       </ul>
+		    </div>
+		  </div>
+
+		  <!-- Main Pane -->
+		  <div data-role="pane" data-layout="main-default" id="main-pane">
+		    <div data-role="view" data-title="Speakers and Topics">
+		        No Speaker or Topic selected
+		    </div>
+
+		    <div data-role="view" data-title="Burke Holland" id="burke">
+		    	<div>
+		    		<img alt="burke" style="float: left;" src="http://www.kendoui.com/Libraries/Blog_Images/BurkeHolland.sflb.ashx"> 
+		    		<p>Burke Holland is a web developer living in Nashville, TN. He enjoys working with and meeting developers who are building mobile apps with jQuery / HTML5 and loves to hack on social API's. Burke works for Telerik as a Developer Evangelist focusing on Kendo UI. Burke is <a href="http://twitter.com/burkeholland">@burkeholland</a> on Twitter.</p> 
+		    		<!-- ModalView changes here -->
+		    		<a data-role="button" data-icon="action" data-rel="modalview" href="#contact">Contact Burke</a>
+		    	</div>
+		    	<div class="pres">
+			    	<h3>Presentations</h3>
+			    	<ul>
+			    		<li>Bridging the PhoneGap</li>
+			    		<li>Brain-meltingly Good WebGL Effects</li>			    		
+			    		<li>An Introduction to Kendo UI</li>
+			    	</ul>			    	
+			    </div>
+
+			    <!-- Modal View -->
+			    <div data-role="modalview" id="contact">
+		    		<div data-role="header">
+	          	<div data-role="navbar">
+	              <span>Contact Burke</span>
+	              <a data-click="closeSendMessage" data-role="button" data-align="right">Cancel</a>
+	          	</div>
+	      		</div>
+
+	      		<ul data-role="listview" data-style="inset">
+	            <li><label for="fromEmail">From:</label> <input type="text" id="fromEmail" /></li>
+	            <li><label for="Message">Message:</label><br /> <textarea id="message">You are teh awesome, Burke!</textarea></li>
+	        	</ul>
+	        	<a data-click="closeSendMessage" id="messageSend" type="button" data-role="button">Send</a>
+		    	</div>
+		    </div>
+				
+				<div data-role="layout" data-id="main-default">
+		        <div data-role="header">
+		            <div data-role="navbar">
+		                <span data-role="view-title">Speakers</span>
+		            </div>
+		        </div>
+		    </div>
+			</div>
+		</div>
+
+		<script src="javascripts/jquery.min.js"></script>
+		<script src="javascripts/kendo.all.min.js"></script>
+		<script>
+			var app = new kendo.mobile.Application(document.body);
+
+			//ModalView
+			function closeSendMessage() {
+        $("#contact").kendoMobileModalView("close");
+    	}
+		</script>
+	</body>
+</html>

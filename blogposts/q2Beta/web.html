@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Q2 Web Demos</title>
+		<link rel="stylesheet" href="stylesheets/kendo.common.min.css">
+		<link rel="stylesheet" href="stylesheets/kendo.blueopal.min.css">
+	</head>
+	<body>
+		<h1>Q2 Beta Demos - Web</h1>
+		<div>
+			<h3>TreeView and HierarchicalDataSource</h3>
+			<div id="productsTree"></div>
+		</div>
+		<div>
+			<h3>DateTimePicker</h3>
+			Please select an appointment time: <input id="appointmentTime" />
+		</div>
+		<script src="javascripts/jquery.min.js"></script>
+		<script src="javascripts/kendo.all.min.js"></script>
+		<script>
+			$(function() {
+				//TreeView and Hierarchical DataSource
+				var OrderDetails = {
+          type: "odata",
+          transport: {
+            read: {
+              url: function(options) {
+                return kendo.format("http://demos.kendoui.com/service/Northwind.svc/Products({0})/Order_Details", options.ProductID);
+              }
+            }
+          },
+          schema: {
+            model: {
+              hasChildren: function() {
+                return false;
+              }
+            }
+          }
+	      };
+
+				var Products = {
+          type: "odata",
+          transport: {
+            read: {
+              url: function(options) {
+                return kendo.format("http://demos.kendoui.com/service/Northwind.svc/Categories({0})/Products", options.CategoryID);
+              }
+            }
+          },
+          schema: {
+            model: {
+              id: "ProductID",
+              hasChildren: "Order_Details",
+              children: OrderDetails
+            }
+          }
+        };
+
+				var Categories = new kendo.data.HierarchicalDataSource({
+          type: "odata",
+          transport: {
+            read: {
+                url: "http://demos.kendoui.com/service/Northwind.svc/Categories"
+            }
+          },
+          schema: {
+            model: {
+              hasChildren: "Products",
+              id: "CategoryID",
+              children: Products
+            }
+          }
+        });
+
+				$('#productsTree').kendoTreeView({
+					dataSource: Categories,
+					dataTextField: ["CategoryName", "ProductName", "OrderID"]
+				});
+				
+
+				//DateTimePicker
+				$('#appointmentTime').kendoDateTimePicker({
+					format: "MM/dd/yy hh:mm tt",
+					interval: 10,
+					value: new Date(2012, 05, 22, 10, 30, 0)
+				});
+			});
+		</script>
+	</body>
+</html>
